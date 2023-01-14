@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <form action='/predict' method="POST">
+
+            <h1>Predict demand for an online classified ad – Avito Demand Prediction</h1>
+
+            Form is pre-filled with required default data or change them and hit predict button.<br><br>
+
+
+            item_id = <input type='text' name='item_id'  size="100" required value="ce6b1521b32a"><br>
+            user_id = <input type='text' name='user_id' size="100" required value="6acef502178f"><br>
+            region = <input type='text' name='region' size="100" required value="Краснодарский край"><br>
+            city = <input type='text' name='city' size="100" required value="Краснодар"><br>
+            parent_category_name = <input type='text' name='parent_category_name' size="100" required value="Услуги"><br>
+            category_name = <input type='text' name='category_name' size="100" required value="Предложение услуг"><br>
+
+            param_1 = <input type='text' name='param_1'  size="100" value="Ремонт, строительство"><br>
+            param_2 = <input type='text' name='param_2' size="100" value="Отделочные работы"><br>
+            param_3 = <input type='text' name='param_3' size="100" value="40–42 (XS)"><br>
+            title = <input type='text' name='title' size="100" required value="Отделка под ключ"><br>
+            
+            description = <input type='text' name='description' size="100" required value="Мастера с большим опытом работы выполнят строительно-отделочные работы под ключ - покраска стен, сантехнические работы, электрика, оклейка обоев, укладка плитки, паркета, укладка керамогранита, монтаж натяжных потолков. Всё, что нужно для Вашего дома, квартиры или офиса! /
+            Звоните, консультация и расчет сметы - бесплатно!"><br>
+            
+            price  = <input type='text' name='price'  size="100" required value="360.0"><br>
+            item_seq_number  = <input type='text' name='item_seq_number' size="100" required value="1"><br>
+            user_type  = <input type='text' name='user_type' size="100" required value="Private"><br>
+            image_top_1  = <input type='text' name='image_top_1' size="100" required value="1191.0"><br>
+               
+            
+            <b>Predicted Deal Score:</b> {{result|safe}} <br>
+            <br><br>
+            <input type="submit" value="Predict">
+            <br><br>
+        </form>
+    </body>
+</html>
